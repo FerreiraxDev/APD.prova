@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/sockjs.min.js"></script>
+    <script src="./js/stomp.min.js"></script>
+    <script src="./js/index.js"></script>
+    <title>Chat Anhanguera</title>
+</head>
+<body>
+    <div id="logo-info"class="info-al">
+        <h3>Aluno: Caio Juan dos Santos Ferreira</h3>
+        <h3>Professor: Edilson Lima</h3>
+        <h3>Disciplina: Arquiteturas Paralelas e Distribuídas</h3>
+    </div>
+    <img id="logo"src="/css/Logo anhanguera.png" alt="logo-faculdade">
+    <div id="chatContainer" class="hidden">
+        <div class="chatHeader">
+            <img id="img-tittle" src="/css/Text-header.png" alt="Chat-apd-tittle">
+        </div>
+        <div id="chatMessages"></div>
+        <div class="chatInput">
+            <form onsubmit="sendMessage(event)">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+                <button id="btn-chat"type="submit">></button>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
+        <div class="popupContent">
+            <img id="img" src="/css/Profile-user.png" alt="User-profile">
+            <input type="text" id="usernameInput" placeholder="Digite seu usuário">
+            <span id="usernameError" style="color: red;"></span>
+            <button onclick="openChat()">Entrar na sala</button>
+        </div>
+    </div>
+</body>
+</html>
